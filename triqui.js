@@ -26,7 +26,9 @@ function play(pos, i) {
 
 function playL1() {
   mcount++;
-
+  if (aval[4]==null) {
+    return 4;
+  } 
   if (m == undefined) {
     for (let index = 0; index < aval.length; index++) {
       const element = aval[index];
@@ -44,9 +46,7 @@ function playL1() {
       return pl1;
     }
   }
-  if (aval[4]==null) {
-    return 4;
-  } 
+  
   return Math.floor(Math.random() * 9);
 }
 
