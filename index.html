@@ -5,16 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Triqui</title>
-  <script src="triqui.js"></script>
+  <script defer src="triqui.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <select name="level" id="level" onchange="document.getElementById('game').classList.remove('hidden');this.classList.add('hidden'); level = this.value">
-    <option value="" selected disabled>Level</option>
-    <option value="0">Random</option>
-    <option value="1">Beginner</option>
-    <option value="2" disabled>Pro</option>
-  </select>
+  <div class="flex justify-center items-center min-h-screen" id="level">
+    <select name="level" onchange="document.getElementById('game').classList.remove('hidden');document.getElementById('level').classList.add('hidden'); level = this.value">
+      <option value="" selected disabled>Select Level</option>
+      <option value="0">Random</option>
+      <option value="1">Beginner</option>
+      <option value="2" disabled>Pro</option>
+    </select>
+
+  </div>
   <div class="grid grid-cols-3 min-h-screen hidden" id="game">
     <button type="button" onclick="play(0, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
     <button type="button" onclick="play(1, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
@@ -25,6 +28,11 @@
     <button type="button" onclick="play(6, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
     <button type="button" onclick="play(7, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
     <button type="button" onclick="play(8, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
+  </div>
+  <div class="absolute left-0 top-0">
+    <div>👑<span id="win">0</span></div>
+    <div>💣<span id="lose">0</span></div>
+    <div>🤝<span id="draw">0</span></div>
   </div>
 </body>
 </html>
