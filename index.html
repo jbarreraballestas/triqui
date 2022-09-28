@@ -9,16 +9,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div class="grid grid-rows-3 grid-flow-col" id="game">
-    <button type="button" onclick="play(0, this)" class="bg-green-500 border-solid border-2 border-sky-500">-</button>
-    <button type="button" onclick="play(1, this)" class="bg-green-500 border-solid border-2 border-sky-500">-</button>
-    <button type="button" onclick="play(2, this)" class="bg-green-500 border-solid border-2 border-sky-500">-</button>
-    <button type="button" onclick="play(3, this)" class="bg-green-500 border-solid border-2 border-sky-500">-</button>
-    <button type="button" onclick="play(4, this)" class="bg-green-500 border-solid border-2 border-sky-500">-</button>
-    <button type="button" onclick="play(5, this)" class="bg-green-500 border-solid border-2 border-sky-500">-</button>
-    <button type="button" onclick="play(6, this)" class="bg-green-500 border-solid border-2 border-sky-500">-</button>
-    <button type="button" onclick="play(7, this)" class="bg-green-500 border-solid border-2 border-sky-500">-</button>
-    <button type="button" onclick="play(8, this)" class="bg-green-500 border-solid border-2 border-sky-500">-</button>
+  <select name="level" id="level" onchange="document.getElementById('game').classList.remove('hidden');this.classList.add('hidden'); level = this.value">
+    <option value="" selected disabled>Level</option>
+    <option value="0">Random</option>
+    <option value="1">Beginner</option>
+    <option value="2" disabled>Pro</option>
+  </select>
+  <div class="grid grid-cols-3 min-h-screen hidden" id="game">
+    <button type="button" onclick="play(0, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
+    <button type="button" onclick="play(1, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
+    <button type="button" onclick="play(2, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
+    <button type="button" onclick="play(3, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
+    <button type="button" onclick="play(4, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
+    <button type="button" onclick="play(5, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
+    <button type="button" onclick="play(6, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
+    <button type="button" onclick="play(7, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
+    <button type="button" onclick="play(8, this)" class="bg-green-500 border-solid border-2 border-sky-500 text-7xl"></button>
   </div>
 </body>
 </html>
