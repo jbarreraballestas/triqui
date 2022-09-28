@@ -125,7 +125,7 @@ function check() {
       location.reload();
     }
     let again = document.createElement('a');
-    again.href = "/";
+    again.href = "./";
     again.innerHTML = "Play again";
     again.className = "absolute right-0 top-0 p-3 bg-cyan-500";
     document.querySelector('body').appendChild(again);
